@@ -1,0 +1,23 @@
+{
+  "name": "cubic-scroll-to",
+  "version": "1.0.0",
+  "description": "ScrollTo with transition effect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/songzhenze/cubic-scrollTo.git"
+  },
+  "keywords": [
+    "scrollTo",
+    "transition"
+  ],
+  "author": "songzhenze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/songzhenze/cubic-scrollTo/issues"
+  },
+  "homepage": "https://github.com/songzhenze/cubic-scrollTo#readme"
+}
