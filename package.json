@@ -2,7 +2,7 @@
   "name": "cubic-scroll-to",
   "version": "1.0.1",
   "description": "ScrollTo with transition effect",
-  "main": "src/index.js",
+  "main": "dist/cubicScrollTo.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"

@@ -3,11 +3,11 @@
  * @LastEditors  : songzhenze
  * @Description  : 滚动到指定位置工具函数
  */
-// CommonJS webpack 打包使用
-// import Cubic from './Cubic.js'
-
 // ES Modules rollup 打包使用
-const Cubic = require('./Cubic.js');
+import Cubic from './Cubic.js'
+
+// CommonJS webpack 打包使用
+// const Cubic = require('./Cubic.js');
 
 let totalTime = 500;
 let progress = 0;

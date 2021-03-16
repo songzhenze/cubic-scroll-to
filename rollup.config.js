@@ -6,7 +6,7 @@ export default {
     input: 'src/index.js',
     output: {
         name: 'cubicScrollTo',
-        file: 'dist/bundle.js',
+        file: 'dist/cubicScrollTo.js',
         format: 'umd' 
     },
     plugins: [
