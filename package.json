@@ -2,9 +2,10 @@
   "name": "cubic-scroll-to",
   "version": "1.0.1",
   "description": "ScrollTo with transition effect",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,24 @@
   "bugs": {
     "url": "https://github.com/songzhenze/cubic-scroll-to/issues"
   },
-  "homepage": "https://github.com/songzhenze/cubic-scroll-to#readme"
+  "homepage": "https://github.com/songzhenze/cubic-scroll-to#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@rollup/plugin-babel": "^5.3.0",
+    "rollup": "^2.41.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.9.1"
+  },
+  "dependencies": {
+  },
+  "browserslist": {
+    "production": [
+      "last 1 version",
+      "> 1%",
+      "IE 9"
+    ]
+  }
 }

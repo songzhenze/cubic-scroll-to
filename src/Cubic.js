@@ -45,4 +45,8 @@ class Cubic {
     return this.getY(t); // 对得到的近似 t 求 y
   }
 }
-module.exports = Cubic;
+// CommonJS webpack 打包使用
+// module.exports = Cubic;
+
+// ES Modules rollup 打包使用
+export default Cubic
