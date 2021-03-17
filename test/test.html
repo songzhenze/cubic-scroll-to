@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
     <script src="../dist/cubicScrollTo.js"></script>
+    <!-- <script type="module" src="../src/index.js"></script> -->
     <style>
-        .box {
-            width: 10000px;
-            height: 10000px;
-            background-color: grey;
-            background: repeating-radial-gradient(circle, white, lightblue 2%);
-            /* background: repeating-linear-gradient(circle, #e66465, #9198e5 10%); */
-        }
+      .box {
+        width: 10000px;
+        height: 10000px;
+        background-color: grey;
+        background: repeating-radial-gradient(circle, white, lightblue 2%);
+        /* background: repeating-linear-gradient(circle, #e66465, #9198e5 10%); */
+      }
     </style>
     <script>
-        console.log(window)
-        console.log('000',cubicScrollTo)
-
-        cubicScrollTo.config({totalTime: 1000})
-
-        function scrollToNext(){
-            console.log('111')
-            var curent = document.documentElement.scrollTop
-            cubicScrollTo.scrollTo(curent, curent + 1000)
-            setTimeout(function (){
-                console.log(document.documentElement.scrollTop)
-            },1000)
-        }
+      function scrollToNext() {
+        const cubic = new cubicScrollTo({ totalTime: 1000 });
+        var curentY = document.documentElement.scrollTop;
+        var curentX = document.documentElement.scrollLeft;
+        console.log(curentX, curentY);
+        // 自动获取当前位置，仅输入目标位置（推荐）
+        cubic.scrollTo(curentX + 500, curentY + 1000);
+        // 手动传入：当前 Y 轴位置 和 目标 Y 轴位置
+        // cubic.scrollToY(curentY, curentY + 500)
+        // 手动传入：当前 X 轴位置 和 目标 X 轴位置
+        // cubic.scrollToX(curentX, curentX + 500);
+        // 手动传入：当前位置 和 目标位置
+        // cubic.scrollFromTo(
+        //   { x: curentX, y: curentY },
+        //   { x: curentX + 500, y: curentY + 500 }
+        // );
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box" onclick="scrollToNext()">
-    <h1>点我</h1>
+      <h1>点我</h1>
     </div>
-</body>
+  </body>
 </html>

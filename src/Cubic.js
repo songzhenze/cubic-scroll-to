@@ -49,4 +49,4 @@ class Cubic {
 // module.exports = Cubic;
 
 // ES Modules rollup 打包使用
-export default Cubic
+export default Cubic;

@@ -1,4 +1,4 @@
-# cubic-scrollTo
+# cubic-scroll-to
 
 ScrollTo with transition effect
 
@@ -11,9 +11,9 @@ npm i cubic-scroll-to
 ## Usage
 
 ```js
-import { scrollTo, config } from 'cubic-scroll-to';
+import { scrollTo, config } from "cubic-scroll-to";
 
-const el = document.querySelector('.scroll-box');
+const el = document.querySelector(".scroll-box");
 this.$nextTick(() => {
   const option = {
     el: el,
@@ -30,8 +30,8 @@ scrollTo(0, 500);
 
 ### Options
 
-| 参数      | 说明           | 类型    | 默认值               |
-| --------- | -------------- | ------- | -------------------- |
-| el        | 父元素         | Element | window               |
-| cubic     | 贝塞尔曲线参数 | Array   | [0.25, 0.1, 0.25, 1] |
-| totalTime | 滚动时间       | Number  | 500                  |
+| 参数      | 说明           | 类型    | 默认值                                                                     |
+| --------- | -------------- | ------- | -------------------------------------------------------------------------- |
+| el        | 父元素         | Element | window                                                                     |
+| cubic     | 贝塞尔曲线参数 | Array   | [0.25, 0.1, 0.25, 1] [参数生成](https://cubic-bezier.com/#.17,.67,.83,.67) |
+| totalTime | 滚动时间       | Number  | 500                                                                        |
