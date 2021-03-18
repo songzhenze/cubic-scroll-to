@@ -8,6 +8,11 @@
     <script src="../dist/cubicScrollTo.js"></script>
     <!-- <script type="module" src="../src/index.js"></script> -->
     <style>
+      .container {
+        width: 80vw;
+        height: 80vh;
+        overflow: scroll;
+      }
       .box {
         width: 10000px;
         height: 10000px;
@@ -18,16 +23,34 @@
     </style>
     <script>
       function scrollToNext() {
-        const cubic = new cubicScrollTo({ totalTime: 1000 });
-        var curentY = document.documentElement.scrollTop;
-        var curentX = document.documentElement.scrollLeft;
-        console.log(curentX, curentY);
+        // 元素内滚动
+        const el = document.querySelector(".container");
+        const cubic = new cubicScrollTo({ totalTime: 1000 ,el:el});
+        const curentY = el.scrollTop;
+        const curentX = el.scrollLeft;
+
+        // const cubic = new cubicScrollTo({ totalTime: 1000 });
+        // const curentY = document.documentElement.scrollTop;
+        // const curentX = document.documentElement.scrollLeft;
+        // console.log(curentX,curentY)
+
+        // 回到顶部
+        // cubic.scrollTo();
         // 自动获取当前位置，仅输入目标位置（推荐）
         cubic.scrollTo(curentX + 500, curentY + 1000);
+
+        // Y 轴回到顶部
+        // cubic.scrollToY()
         // 手动传入：当前 Y 轴位置 和 目标 Y 轴位置
         // cubic.scrollToY(curentY, curentY + 500)
+
+        // X 轴回到顶部
+        // cubic.scrollToX()
         // 手动传入：当前 X 轴位置 和 目标 X 轴位置
         // cubic.scrollToX(curentX, curentX + 500);
+
+        // 回到顶部
+        // cubic.scrollFromTo();
         // 手动传入：当前位置 和 目标位置
         // cubic.scrollFromTo(
         //   { x: curentX, y: curentY },
@@ -37,8 +60,10 @@
     </script>
   </head>
   <body>
-    <div class="box" onclick="scrollToNext()">
-      <h1>点我</h1>
+    <div class="container">
+      <div class="box" onclick="scrollToNext()">
+        <h1>点我</h1>
+      </div>
     </div>
   </body>
 </html>

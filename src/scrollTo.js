@@ -27,7 +27,6 @@ class ScrollTo extends Cubic {
     if (option.el) {
       this.el = option.el;
     }
-    console.log(option);
     if (option.totalTime) {
       this.totalTime = option.totalTime;
     }
@@ -53,9 +52,8 @@ class ScrollTo extends Cubic {
     );
   }
 
-  scrollTo(targetPositionX, targetPositionY) {
+  scrollTo(targetPositionX = 0, targetPositionY = 0) {
     const position = this.getScrollOffsets();
-    console.log(position);
     this.current = position;
     this.distance = {
       x: targetPositionX - position.x,
@@ -64,9 +62,9 @@ class ScrollTo extends Cubic {
     window.requestAnimationFrame(this.anim.bind(this));
   }
 
-  scrollFromTo(currentPosition, targetPosition) {
-    const position = currentPosition;
+  scrollFromTo(currentPosition, targetPosition = { x: 0, y: 0 }) {
     const autoPosition = this.getScrollOffsets();
+    const position = currentPosition || autoPosition;
     if (!position.x) {
       position.x = autoPosition.x;
     }
@@ -82,9 +80,11 @@ class ScrollTo extends Cubic {
     window.requestAnimationFrame(this.anim.bind(this));
   }
 
-  scrollToY(currentPositionY, targetPositionY) {
+  scrollToY(currentPositionY, targetPositionY = 0) {
     const position = this.getScrollOffsets();
-    console.log(position);
+    if (!currentPositionY) {
+      currentPositionY = position.y;
+    }
     this.current = { x: position.x, y: currentPositionY };
     this.distance = {
       x: 0,
@@ -93,9 +93,11 @@ class ScrollTo extends Cubic {
     window.requestAnimationFrame(this.anim.bind(this));
   }
 
-  scrollToX(currentPositionX, targetPositionX) {
+  scrollToX(currentPositionX, targetPositionX = 0) {
     const position = this.getScrollOffsets();
-    console.log(position);
+    if (!currentPositionX) {
+      currentPositionX = position.x;
+    }
     this.current = { x: currentPositionX, y: position.y };
     this.distance = {
       x: targetPositionX - currentPositionX,
@@ -106,8 +108,10 @@ class ScrollTo extends Cubic {
 
   getScrollOffsets(w) {
     //指定窗口，如果不指定则默认当前窗口
+    if(this.el !== window){
+      return { x: this.el.scrollLeft, y: this.el.scrollTop };
+    }
     w = w || window;
-    console.log(w.pageXOffset, w.pageYOffset);
     //除了IE8 及更早的版本以外，其他浏览器都能用
     if (w.pageXOffset != null) {
       return { x: w.pageXOffset, y: w.pageYOffset };
