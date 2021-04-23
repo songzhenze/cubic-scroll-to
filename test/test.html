@@ -24,6 +24,7 @@
     <script>
       function scrollToNext() {
         // 元素内滚动
+        // Scrolling within elements
         const el = document.querySelector(".container");
         const cubic = new cubicScrollTo({ totalTime: 1000 ,el:el});
         const curentY = el.scrollTop;
@@ -35,23 +36,31 @@
         // console.log(curentX,curentY)
 
         // 回到顶部
+        // Back to the top
         // cubic.scrollTo();
         // 自动获取当前位置，仅输入目标位置（推荐）
+        // Automatically get the current location, only enter the target location (recommended)
         cubic.scrollTo(curentX + 500, curentY + 1000);
 
         // Y 轴回到顶部
+        // The y-axis returns to the top
         // cubic.scrollToY()
         // 手动传入：当前 Y 轴位置 和 目标 Y 轴位置
+        // Manual input: current Y-axis position and target Y-axis position
         // cubic.scrollToY(curentY, curentY + 500)
 
         // X 轴回到顶部
+        // The x-axis returns to the top
         // cubic.scrollToX()
         // 手动传入：当前 X 轴位置 和 目标 X 轴位置
+        // Manual input: current X-axis position and target X-axis position
         // cubic.scrollToX(curentX, curentX + 500);
 
         // 回到顶部
+        // Back to the top
         // cubic.scrollFromTo();
         // 手动传入：当前位置 和 目标位置
+        // Manual transfer in: current location and target location
         // cubic.scrollFromTo(
         //   { x: curentX, y: curentY },
         //   { x: curentX + 500, y: curentY + 500 }
@@ -62,7 +71,7 @@
   <body>
     <div class="container">
       <div class="box" onclick="scrollToNext()">
-        <h1>点我</h1>
+        <h1>Click Me</h1>
       </div>
     </div>
   </body>
