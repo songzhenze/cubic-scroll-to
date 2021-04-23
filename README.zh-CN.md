@@ -1,5 +1,7 @@
 # cubic-scroll-to
 
+[English](./README.md) | **中文**
+
 带过渡效果的 scrollTo;
 
 像使用 CSS cubic-bezier() 函数一样简单并且强大。[参数生成](https://cubic-bezier.com/#.17,.67,.83,.67)

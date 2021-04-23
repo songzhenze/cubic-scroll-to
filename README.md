@@ -1,5 +1,7 @@
 # cubic-scroll-to
 
+**English** | [中文](./README.zh_CN.md)
+
 scrollTo with transition effect;
 
 It's as simple and powerful as using the CSS cubic-bezier() function.[Parameter generation](https://cubic-bezier.com/#.17,.67,.83,.67)
