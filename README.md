@@ -6,6 +6,10 @@ scrollTo with transition effect;
 
 It's as simple and powerful as using the CSS cubic-bezier() function.[Parameter generation](https://cubic-bezier.com/#.17,.67,.83,.67)
 
+## Demo
+
+[Demo](./test/test.html)
+
 ## Why
 
 1. other libraries need complex calculation if they want to control rolling speed. This library implements cubic Bezier formula. You can customize the rolling effect you want by simply passing in parameters like CSS cubic-bezier().
