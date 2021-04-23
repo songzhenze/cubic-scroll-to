@@ -1,6 +1,6 @@
 # cubic-scroll-to
 
-**English** | [中文](./README.zh_CN.md)
+**English** | [中文](./README.zh-CN.md)
 
 scrollTo with transition effect;
 
